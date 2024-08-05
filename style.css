@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+header{
+    color:white;
+    font-size: 20px;
+    background-color: black;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;  
+    height: 90px;
+}
+
+/* Nav bar */
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    margin: 0 30px;
+    list-style: none;
+}
+
+@media(max-width: 1024px){
+    nav ul li{
+        margin: 0 18px;
+        list-style: none;
+    }    
+}
+
+@media(max-width: 800px){
+    nav ul li{
+        margin: 0 10px;
+        list-style: none;
+    }    
+}
+
+nav ul li a{
+    color: rgb(182, 182, 182);
+    text-decoration: underline;
+    font-size: 14px;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgba(182, 182, 182, 0);
+    transition: text-decoration-color 0.5s ease-in-out;
+}
+
+nav ul li a:hover{
+    text-decoration-color: rgba(182, 182, 182, 1);
+}
+
+/* Hamburger menu*/
+
+.dropdown-ham{
+    margin-left: 20px;
+}
+
+.dropdown-i{
+    display: none;
+}
+
+.dropdown-ham-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-ham-content a{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition:background-color 0.15s, color  ;
+}
+
+.dropdown-ham-content a:hover{
+    background-color: black;
+    color: white;
+}
+
+.dropdown-ham:hover .dropdown-ham-content{
+    display: block;
+}
+
+/* Nav drop down */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+    background-color: rgb(42, 42, 42);
+    color: white;
+}
+  
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.chev-icon{
+    font-size: 12px;
+    margin-left: 5px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown:hover .chev-icon{
+    transform: rotate(180deg)
+}
+
+.dropdown-icon{
+    color: black;
+    margin-right: 10px;
+}
+
+.dropdown-content a:hover .dropdown-icon{
+    color: white;
+}
+
+/* Card container */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products{
+    margin: 50px 0 ;
+    display: grid;
+    width: 100%;
+    padding: 0 100px;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+}
+
+@media(max-width: 800px){
+    .products{
+        padding: 0 50px;
+    }
+}
+
+.btn-buy{
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    background-color:black;
+    color: white;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.btn-buy:hover{
+    background-color: white;
+    color: black;
+    
+}
+
+.btn-buy:hover i{
+    color: black;
+}
+
+.btn-buy i{
+    color: white;
+}
+
+.product{
+    transition: transform 0.2s;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product:hover{
+    transform: scale(1.03);
+
+}
+.card-img{
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.product-info{
+    padding: 20px;
+}
+
+.product-info h2{
+    font-size: 17px;
+    padding-bottom: 15px;
+}
+
+i{
+    font-size: 17px;
+    color: rgb(182, 182, 182);
+    transition: color 0.2s;
+}
+
+i:hover{
+    color: white;
+}
+
+@media(max-width: 800px){
+    .dropdown-i{
+        display: block;
+    }
+    .display{
+        display: none;
+    }
+    .nav-icon{
+        margin: 0 10px;
+    }
+}
+
+/* Footer */
+
+footer{
+    width: 100%;
+    height: 100px;
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon{
+    color: white;
+    cursor: pointer;
+}
+
+
+.buy{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 40px;
+}
+
+@media(max-width: 400px){
+    .logo{
+        height: 30px;
+    }
+}
